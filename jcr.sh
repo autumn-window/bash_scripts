@@ -2,6 +2,7 @@
 #autumnWind
 #November 1st
 #Compiles, then runs java files in a directory
+#Like a lame version of rust's cargo!
 
 #Help message
 Usage() {
@@ -23,10 +24,10 @@ FILE="$(basename "$INPUT")"
 
 #Check if INPUT is valid
 [ -f "$INPUT" ] && [ "${FILE##*.}" == "java" ] || { #invalid file
-												echo "error: $INPUT is not a valid java file";
-												echo;
-												Usage;
-										       }
+						   echo "error: $INPUT is not a valid java file";
+						   echo;
+					           Usage;
+	   				          }
 
 optstring=":hrvi"
 #Check options
